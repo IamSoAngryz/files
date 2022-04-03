@@ -1,0 +1,35 @@
+{
+  "employees": [
+    {
+      "name": "John Doe",
+      "salary": 6000,
+      "position": "Python Developer",
+      "fulltime": false,
+      "hobbies": [
+        "reading",
+        "chess",
+        "travel"
+      ]
+    },
+    {
+      "name": "Jane Doe",
+      "salary": 9000,
+      "position": "Python Developer",
+      "seniority": 6,
+      "fulltime": true,
+      "hobbies": null
+    },
+    {
+      "name": "Alex Doe",
+      "salary": 4700,
+      "position": "QA",
+      "seniority": 10,
+      "fulltime": true,
+      "hobbies": [
+        "travel",
+        "fitness",
+        "board games"
+      ]
+    }
+  ]
+}
