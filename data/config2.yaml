@@ -1,0 +1,12 @@
+data_types:
+- int
+- float
+- str
+- bool
+- list
+- dict
+- set
+- tuple
+docs: https://docs.python.org/3.8/
+language: Python
+version: 3.8
