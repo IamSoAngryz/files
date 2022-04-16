@@ -30,31 +30,30 @@ object:
 """
 
 
-
-from yaml import Loader
 import yaml
+from yaml import Loader
 
-with open('data/config.yaml', 'r') as f:
+with open('data\config.yaml', 'r') as f:
     data = yaml.safe_load(f)
     print(type(data))
-    print(f'Deserializarea a generat: {data}')
+    print(f'Deserealizarea a generat: {data}')
     print(f'Lista data_types: {data["data_types"]}')
     data["data_types"].append("tuple")
     print(f'Lista data_types dupa append: {data["data_types"]}')
     print(data)
-
+print()
 with open('data/config2.yaml', 'w+') as f:
     yaml.dump(data, f, default_flow_style=False)
     f.seek(0)
     for line in f:
         print(line, end='')
-
+print()
 course_yaml = """
     course: Python Developer
     tools: [Git, Visual Studio Code, GitHub]
 """
 data_course = yaml.safe_load(course_yaml)
-# data_course2 = yaml.load(course_yaml, Loader = Loader)
+data_course2 = yaml.load(course_yaml, Loader=Loader)
 print(type(data_course))
 print(f'Deserializarea stringului a generat: {data_course}')
 data_course["nr_studenti"] = 20

@@ -38,38 +38,32 @@ with open('date.txt', 'r') as f:
 
 with open('date.txt', 'r') as f:
     for line in f:
-        print(line, end ='')
+        print(line, end='')
 
 with open('orase.txt', 'r') as f:
     size_to_read = 5
     content = f.read(size_to_read)
-    while len(content) > 0: # citirea din fisier a intors un string cu dim > 0
+    while len(content) > 0:         # citirea din fisier a intors un string cum dim > 0
         print(content, end='')
         content = f.read(size_to_read)
 
 try:
-    with open('orase2.txt', 'r') as f:
-        print(f.readline(), end = '')
-        print(f.readline(), end = '')
-except Exception as e:
-    print(f'{e.__class__.__name__}: {e}')
-
-try:
     with open('orase.txt', 'r', encoding='utf-8') as f:
-        print(f.readline(), end = '')
-        print(f.readline(), end = '')
+        print(f.readline(), end='')
+        print(f.readline(), end='')
         print(f'Pozitia in fisier: {f.tell()}')
         f.seek(0)
-        print(f.readline(), end = '')
+        print(f.readline(), end='')
         # f.seek(2)
-        print(f.readline(), end = '')
-        print(f.readline(), end = '')
-        print(f.readline(), end = '')
+        print(f.readline(), end='')
+        print(f.readline(), end='')
+        print(f.readline(), end='')
 except Exception as e:
     print(f'{e.__class__.__name__}: {e}')
 print(f)
 print(f.name)
 print(f.mode)
 print(f.closed)
-
 # f.read()
+
+  

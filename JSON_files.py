@@ -30,7 +30,7 @@ Deserializarea se paote realiza si pe baza unui string:
 import json
 import os
 
-with open(os.path.join('data\data.json'), 'r') as f:
+with open(os.path.join('data/data.json'), 'r') as f:
     data = json.load(f)
     print(f'Tipul datelor: {type(data)}')
     print(f'Deserializare JSON: {data}')
@@ -38,23 +38,24 @@ with open(os.path.join('data\data.json'), 'r') as f:
 with open('data/employees.json', 'r') as f:
     employees_data = json.load(f)
     print(type(employees_data))
-    print(f'Datele din json deserializare: {employees_data}')
+    print(f'Datele din json deserializate: {employees_data}')
 
 employees_data['employees'][1]['salary'] = 9000
-with open('data/new_employees.json', 'w') as f:
-    json.dump(employees_data, f, indent = 2)
+with open('data/new_employees.json','w') as f:
+    json.dump(employees_data, f, indent=2)
 
-# serializarea intr-un string object:
-employees_string = json.dumps(employees_data, indent = 2)
-print(employees_string)
+# serialization intr-un string object
+employee_string = json.dumps(employees_data, indent=2)
+print(employee_string)
 
-languages = """
+languages ="""
     {
-        "Python: 3.8
-        "JavaScript": "ES6"
-        "PHP": 7.4
+        "Python: 3.8,
+        "javaScript": "ES6"
+        "PHP":7.4
 
     }
     """
 languages_dict = json.loads(languages)
 print(f'Deserializarea stringului: {languages_dict}')
+print(type(languages_dict))

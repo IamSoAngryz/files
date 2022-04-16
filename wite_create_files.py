@@ -11,7 +11,7 @@ Scrierea in fisiere se realizeaza prin deschiderea in modul scriere
 
 Metoda write() permite scrierea efectiva a unui sir de caracter
 Sintaxa:
-f.write(sir_de_caractere
+f.write(sir_de_caractere)
 Pentru diferentierea pe linii a continutului scirs este aduagat implicit
 '\n' -newline
 """
@@ -22,13 +22,13 @@ with open('orase.txt', 'w') as f:
     f.write('Londra, UK\n')
     f.seek(0)
     # print(f.read())
-    
+print()
 
 # with open('orase.txt', 'r') as f:
 #     # print(f.read(), end='')
 #     for line in f:
-#         print(line, end = '')
-
+#         print(line, end='')
+print()
 with open('orase.txt', 'w+') as f:
     f.write('Oradea, Romania\n')
     f.write('Bacau, Romania\n')
@@ -48,6 +48,6 @@ with open('tari2.txt', 'x+') as f:
     f.seek(0)
     for line in f:
         print(line, end='')
-print()
+
 with open('orase3.txt', 'a+') as f:
     f.write('test\n')

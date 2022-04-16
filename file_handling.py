@@ -21,9 +21,9 @@ modul_deschidere poate fi:
 - r (implicit) - citire sau alte caractere w, a, x, +
 """
 
-f = open('date.txt', 'r')           # deschidere fisier, implicit pt citre
+f = open('date.txt', 'r')        # deschidere fisier, implicit pt citire
 file_content = f.read()
-print(file_content, end = ' ')      # citim din fisier si afisam
-print(type(f))                      # _io.TextIOWrapper
-print(type(file_content))           # str
-f.close()                           # inchidem fisierul
+print(f.read(), end=' ')             # citim din fisier si afisam
+print(type(f))                  # _io.TextIOWrapper
+print(type(file_content))          # str
+f.close()                   # inchidem fisierul

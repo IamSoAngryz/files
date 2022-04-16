@@ -12,6 +12,7 @@ Un-pickling (Deserialization / Citire)
 
 import pickle
 
+
 class Student:
 
     def __init__(self, name):
@@ -20,14 +21,15 @@ class Student:
     def display(self):
         print(f'Student: {self.name}')
 
-pickle_stream = pickle.dumps(Student('John Doe'))   #picke_stream - bytes
+pickle_stream = pickle.dumps(Student('John Doe'))       # pickle_stream - bytes
 print(type(pickle_stream))
-new_student = pickle.loads(pickle_stream)       # tip Student
+new_student = pickle.loads(pickle_stream)               # tip Student
 print(type(new_student))
 new_student.display()
 
 with open('data/pickle_test.bin', 'wb') as f:
     pickle.dump(new_student, f)
+
 with open('data/pickle_test.bin', 'rb') as f:
     python_object = pickle.load(f)
     print(type(python_object))
